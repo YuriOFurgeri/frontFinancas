@@ -6,6 +6,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'moment/locale/pt-br';
 import './styles.css';
 import Navbar from '../MainPage/Navbar';
+import EventoMaisProximo from '../EventoMaisProx';
 
 moment.locale('pt-br');
 //configurar o calendário para português
@@ -94,12 +95,12 @@ const CalendarioMetas = () => {
         </div>
         <div className="card-content">
 
-        <div class="input-group mb-3">               
+        <div class="input-group input-group-lg mb-3">               
         <span class="input-group-text">Descrição da Meta:</span>
         <input type="text" value={titulo} class="form-control" onChange={(e) => setTitulo(e.target.value)} required />
         </div>
         
-        <div class="input-group mb-3">               
+        <div class="input-group input-group-lg mb-3">               
         <span class="input-group-text">Valor da Meta:</span>
         <input class="form-control" type="number" value={valor} onChange={(e) => setValor(e.target.value)} required />
 
@@ -157,7 +158,7 @@ const CalendarioMetas = () => {
          //<EventoMaisProximo eventoMaisProximo={eventoMaisProximo} />
             <div className="container-fluid mt-5">    
             AAAAAAAAAAA
-            </div>        
+            </div>       
       )}
       {/* Renderize o novo componente EventoMaisProximo aqui e passe o eventoMaisProximo como uma prop */}
 

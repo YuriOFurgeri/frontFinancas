@@ -7,11 +7,12 @@ import SpeechComponent from '../SpeechComponent';
 import extractInfo from '../ExtractInfo';
 
 const FormTeste = ({getMovimentacoes, onEdit, setOnedit}) => {
-  
+
+    
     const ref = useRef();
 
     const [transcript, setTranscript] = useState('');
-
+    
 
     useEffect(() => {
         if(onEdit){
@@ -113,7 +114,7 @@ const FormTeste = ({getMovimentacoes, onEdit, setOnedit}) => {
           <div className="card">
 
 <form ref={ref} onSubmit={handleSubmit}>
-          <div className="text-center flex-grow-1">
+          <div className="text-center flex-grow-1 cima">
             <span className="text-muted">Adicione aqui suas movimentações</span>
             </div>
             <div className="card-content">
@@ -121,10 +122,10 @@ const FormTeste = ({getMovimentacoes, onEdit, setOnedit}) => {
                 <div>
                     <SpeechComponent onTranscriptChange={setTranscript} />
                 </div>
-                <div className="text-center flex-grow-1">
+                <div className="text-center flex-grow-1 baixo">
 <div className="container">
     
-<div className="input-group mb-3">               
+<div className="input-group mb-3 input-group-lg ">               
 <span className="input-group-text">Descrição:</span>
   <input
     name="descricao"
@@ -135,7 +136,7 @@ const FormTeste = ({getMovimentacoes, onEdit, setOnedit}) => {
   />
 </div>
 
-<div className="input-group mb-3">
+<div className="input-group input-group-lg mb-3">
 <span className="input-group-text">R$</span>
   <input
     style={{ width: '33%' }} // Ajuste o valor conforme necessário

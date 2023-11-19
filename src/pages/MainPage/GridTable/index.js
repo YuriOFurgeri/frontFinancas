@@ -34,7 +34,7 @@ const GridTable = ({setOnEdit, movimentacoes, setMovimentacoes, updateCardValues
           <div className="card">
 
 
-    <table className="table">
+    <table className="table itenslista">
   <thead>   
     <tr>
       <th style={{ width: '50%' }} scope="col">Descrição</th>
@@ -73,11 +73,11 @@ const GridTable = ({setOnEdit, movimentacoes, setMovimentacoes, updateCardValues
     <tbody>
     {movimentacoes.map((item, i) => (
           <tr key={i}>
-            <td>{item.descricao}</td>
-            <td>{item.operacao}</td>
-            <td className="d-none d-md-table-cell">{item.valor}</td>
+            <td className="itenslista">{item.descricao}</td>
+            <td className="itenslista">{item.operacao}</td>
+            <td className="d-none d-md-table-cell itenslista">{item.valor}</td>
 
-            <td>{moment(item.data_mov).format('DD-MM-YYYY')}</td>
+            <td className="itenslista">{moment(item.data_mov).format('DD-MM-YYYY')}</td>
 
             <td style={{ textAlign: 'center' }}>
               <button className="btn" onClick={() => handleEdit(item)}>

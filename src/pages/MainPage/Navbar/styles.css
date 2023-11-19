@@ -1,3 +1,11 @@
 .navbar-height{
-    height: 70px;
+    height: 80px;
+}
+
+.textogrande{
+    font-size: 30px;
+}
+
+.textomedio{
+    font-size: 20px;
 }

@@ -11,15 +11,12 @@ import GridTable from './GridTable';
 import Graph from './Graph';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MetasSimps from './MetasSimp';
+import EventoMaisProximo from '../EventoMaisProx';
+
 
 
 const MainPage = () => {
-    const exemploChart = [
-        { action: 'lucro', value: 1146.75 },
-        { action: 'perda', value: 203.25 },
-      ];
-
-
+  const [eventoMaisProximo, setEventoMaisProximo] = useState(null); // Estado para rastrear o evento mais próximo
 
       
   const [movimentacoes, setMovimentacoes] = useState([]);
@@ -124,6 +121,7 @@ const MainPage = () => {
         </div>
         </div>
         <MetasSimps />
+        <EventoMaisProximo eventoMaisProximo={eventoMaisProximo} />
         </div>
         <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT}/>
         <div>
