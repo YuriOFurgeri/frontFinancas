@@ -1,0 +1,25 @@
+.largo{
+    width: 100%;
+}
+
+.bg-body-tertiary {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Cor de fundo desejada */
+    /* Outros estilos padrão */
+  }
+@media (max-width: 550px) {
+    .largo {
+      width: 100%;  
+      margin-left: auto;
+      margin-right: auto;
+    }
+    }
+
+      
+      /* Media query para ocultar o componente em telas menores que 600px (modo celular) */
+      @media (max-width: 600px) {
+        .cartinhas {
+          display: none;
+        }
+      }

@@ -17,24 +17,24 @@ const Navbar = () => {
       <nav className="navbar fixed-top navbar-expand-lg bg-body-secondary navbar-height">
         <div className="container-fluid">
         <i className="bi bi-rocket text-danger"></i>
-          <a className="navbar-brand textogrande" href="#" onClick={()=>[navigate("/")]}>FinançasApp</a>
+          <a className="navbar-brand textogrande" href="#" onClick={()=>[navigate("/movimentacoes")]}>FinançasApp</a>
          
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active textomedio" aria-current="page" href="#" >Home</a>
+                <a className="nav-link active textomedio" aria-current="page" href="#"onClick={()=>[navigate("/movimentacoes")]} >Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link active textomedio" aria-current="page" href="" onClick={()=>[navigate("/metas")]}>Metas</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link textomedio" href="#">Detalhes</a>
+                <a className="nav-link textomedio" href="https://github.com/YuriOFurgeri/tcc-financas">Detalhes</a>
               </li>
             </ul>
           </div>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link textomedio" href="#">testUser</a>
+              <a className="nav-link textomedio" href="#" onClick={()=>[navigate("/perfil")]}>Perfil</a>
             </li>
           </ul>
         </div>

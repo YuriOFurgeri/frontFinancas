@@ -1,0 +1,72 @@
+.formlargo{
+    width: 89%;
+    height: 220px;
+}
+
+.cardgrande{
+    height: 180px;
+}
+
+.cima{
+    margin-top: 15px;
+}
+
+.baixo{
+    margin-bottom: 15px;
+}
+
+.camposgrande{
+font-size: 30px;
+height: 30px;
+}
+
+@media (max-width: 600px) {
+    .formlargo{
+        width: 100%;
+        height: 220px;
+    }
+    
+    .cardgrande{
+        height: 180px;
+    }
+    
+    .cima{
+        margin-top: 15px;
+    }
+    
+    .baixo{
+        margin-bottom: 15px;
+    }
+    
+    .camposgrande{
+    font-size: 30px;
+    height: 30px;
+    }
+    
+    @media (max-width: 600px) {
+        .sumir {
+            display: none;
+        }
+        .formlargo{
+            width: 89%;
+            height: 220px;
+        }
+        
+        .cardgrande{
+            height: 180px;
+        }
+        
+        .cima{
+            margin-top: 15px;
+        }
+        
+        .baixo{
+            margin-bottom: 15px;
+        }
+        
+        .camposgrande{
+        font-size: 30px;
+        height: 30px;
+        }
+    }
+}

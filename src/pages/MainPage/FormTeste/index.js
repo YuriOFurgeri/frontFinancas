@@ -6,7 +6,7 @@ import {toast} from 'react-toastify';
 import SpeechComponent from '../SpeechComponent';
 import extractInfo from '../ExtractInfo';
 
-const FormTeste = ({getMovimentacoes, onEdit, setOnedit}) => {
+const FormTeste = ({getMovimentacoes, onEdit, setOnedit /* userId*/}) => {
 
     
     const ref = useRef();
@@ -50,45 +50,87 @@ const FormTeste = ({getMovimentacoes, onEdit, setOnedit}) => {
             return toast.warn("Preencha todos os campos");
         }
         if(onEdit){
-            await axios
-                .put("http://localhost:8080" + onEdit.id, {
-                    descricao: movimentacao.descricao.value,
-                    operacao: movimentacao.operacao.value,
-                    valor: movimentacao.valor.value,
-                    data_mov: movimentacao.data_mov.value,                
-                    //idusuario: movimentacao.idusuario, // Inclua o ID do usuário
-                  })
-                    
-                    .then(({data}) => 
-                toast.success(data))
-            .catch(({data}) => 
-                toast.error(data));
+          await axios
+              .put("http://localhost:8080" + onEdit.id, {
+                  descricao: movimentacao.descricao.value,
+                  operacao: movimentacao.operacao.value,
+                  valor: movimentacao.valor.value,
+                  data_mov: movimentacao.data_mov.value,                
+                  //idusuario: movimentacao.idusuario, // Inclua o ID do usuário
+                })
+                  
+                  .then(({data}) => 
+              toast.success(data))
+          .catch(({data}) => 
+              toast.error(data));
 
-        } else {
-            await axios
-            .post("http://localhost:8080", {
-                descricao: movimentacao.descricao.value,
-                operacao: movimentacao.operacao.value,
-                valor: movimentacao.valor.value,
-                data_mov: movimentacao.data_mov.value,
-               // idusuario: movimentacao.idusuario, // Inclua o ID do usuário
+      } else {
+          await axios
+          .post("http://localhost:8080", {
+              descricao: movimentacao.descricao.value,
+              operacao: movimentacao.operacao.value,
+              valor: movimentacao.valor.value,
+              data_mov: movimentacao.data_mov.value,
+             // idusuario: movimentacao.idusuario, // Inclua o ID do usuário
 
-              })
-            .then(({data}) => {
-                toast.success(data);
             })
-            .catch(({data}) => {
-                toast.error(data);
-            });
-        }
-        movimentacao.descricao.value = "";
-        movimentacao.operacao.value = "";
-        movimentacao.valor.value = "";
-        movimentacao.data_mov.value = "";
+          .then(({data}) => {
+              toast.success(data);
+          })
+          .catch(({data}) => {
+              toast.error(data);
+          });
+      }
+      movimentacao.descricao.value = "";
+      movimentacao.operacao.value = "";
+      movimentacao.valor.value = "";
+      movimentacao.data_mov.value = "";
 
-        //setOnEdit(null);
-        getMovimentacoes();
-    }; 
+      //setOnEdit(null);
+      getMovimentacoes();
+  }; 
+
+        
+        /*
+        const movimentacaoData = {
+          descricao: movimentacao.descricao.value,
+          operacao: movimentacao.operacao.value,
+          valor: movimentacao.valor.value,
+          data_mov: movimentacao.data_mov.value,
+          idusuario: userId,
+        };
+    */
+/*
+        if(onEdit){
+          await axios
+          .put(`http://localhost:8080/${onEdit.id}`, movimentacaoData)
+          .then(({ data }) => {
+            toast.success(data);
+          })
+          .catch(({ data }) => {
+            toast.error(data);
+          });
+      } else {
+        await axios
+          .post("http://localhost:8080", movimentacaoData)
+          .then(({ data }) => {
+            toast.success(data);
+          })
+          .catch(({ data }) => {
+            toast.error(data);
+          });
+      }
+  
+      movimentacao.descricao.value = "";
+      movimentacao.operacao.value = "";
+      movimentacao.valor.value = "";
+      movimentacao.data_mov.value = "";
+  
+      //setOnEdit(null);
+      getMovimentacoes();
+    };
+    */
+  
 
 /*
     const handleMicButtonClick = () => {
@@ -107,7 +149,7 @@ const FormTeste = ({getMovimentacoes, onEdit, setOnedit}) => {
     */
     return (
 
-        <div>
+        <div> 
             <div className="container-fluid mt-3">
       <div className="row justify-content-center align-items-center">
         <div className="col-12 col-md-9 col-lg-10 mb-4 formlargo">

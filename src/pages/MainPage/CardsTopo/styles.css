@@ -13,3 +13,23 @@
 .iconegrande{
     font-size: 50px;
 }
+
+
+@media (max-width: 600px) {
+.sumir {
+    display: none;
+}
+.cardgrande{
+    height: 80px;
+}
+.textogrande{
+    font-size: 20px;
+}
+.textomedio{
+    font-size: 10px;
+}
+.iconegrande{
+    font-size: 30px;
+}
+
+  }

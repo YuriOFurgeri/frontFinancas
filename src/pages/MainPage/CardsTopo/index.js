@@ -22,7 +22,7 @@ const CardsTopo = ({total,ganhos,gastos}) => {
           </div>
         </div>
 
-        <div className="col-12 col-md-6 col-lg-4 mb-4">
+        <div className="col-12 col-md-6 col-lg-4 mb-4 sumir">
           <div className="card cardgrande">
             <div className="card-content">
               <div className="card-body d-flex justify-content-between align-items-start">
@@ -32,14 +32,13 @@ const CardsTopo = ({total,ganhos,gastos}) => {
                 </div>
                 <div>
                 <i className="bi bi-graph-up-arrow text-success h1 iconegrande"></i>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="col-12 col-md-6 col-lg-4 mb-4">
+        <div className="col-12 col-md-6 col-lg-4 mb-4 sumir">
           <div className="card cardgrande">
             <div className="card-content">
               <div className="card-body d-flex justify-content-between align-items-start">
